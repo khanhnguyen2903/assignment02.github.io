@@ -1,0 +1,467 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "fontello", sans-serif;
+  color: #495057;
+  font-size: 14px;
+}
+
+h1 {
+  font-size: 22px;
+}
+
+.bg-grey {
+  background: #f7f7f7;
+}
+
+section > .container {
+  width: 1170px;
+  margin: auto;
+  display: block;
+
+  padding: 30px 50px;
+}
+/* ---------------------------------Phần Banner--------------------------------- */
+/* Chèn ảnh banner */
+#banner {
+  background-image: linear-gradient(
+      rgba(55, 55, 55, 0.6),
+      rgba(55, 55, 55, 0.6)
+    ),
+    url(../images/banner.jpg);
+  height: 400px;
+  background-size: cover;
+  color: #fff;
+
+  position: relative;
+}
+
+#banner h1 {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 44px);
+  font-size: 36px;
+  font-weight: 700;
+}
+
+#banner span {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 92px);
+  font-size: 12px;
+  font-weight: 300;
+}
+
+/* -----------------------------------------Phần Navbar-------------------------------- */
+/* Tạo 5 cột cho nav-bar */
+#nav-bar .container {
+  text-align: center;
+  display: grid;
+  grid-template-columns: 120px 120px 1fr 120px 120px;
+  width: 800px;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 15px 0;
+}
+
+#nav-bar a:link,
+#nav-bar a:visited {
+  text-decoration: none;
+  display: inline-block;
+  text-transform: uppercase;
+  color: #444;
+}
+
+/* Tạo màu cho icon */
+.nav-bar-icon {
+  color: #0079bc;
+  margin-left: 5px;
+}
+
+/* Tạo hình dạng ảnh cá nhân của nav-bar */
+.nav-bar-image img {
+  width: auto;
+  height: 150px;
+  object-fit: contain;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  bottom: 0;
+  margin: auto;
+  transform: translate(-50%, 0);
+  border: 5px solid #fff;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* ------------------------Phần Mục tiêu nghề nghiệp và Thông tin cá nhân-------------------------- */
+/* Tạo 2 cột bằng nhau cho section */
+#about .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+#target {
+  margin-top: 20px;
+  padding-top: 20px;
+  padding-right: 30px;
+}
+
+#target p {
+  margin-top: 36px;
+  line-height: 1.7;
+}
+
+#personal-info ul {
+  margin-top: 36px;
+  list-style-type: none;
+
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+#about {
+  border: 1px solid #e9ecef;
+  position: relative;
+}
+
+#personal-info {
+  padding-top: 20px;
+  padding-left: 30px;
+}
+
+/* Tạo 1 đường kẻ dọc chia đôi section */
+.vl {
+  width: 1px;
+  border-left: 1px solid #e9ecef;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+/* Phần icon của personal-info */
+.personal-info-icon {
+  margin-top: 30px;
+  display: flex;
+  gap: 10px;
+  color: #0079bc;
+}
+
+/* --------------------------------Phần Thông tin nghề nghiệp---------------------------- */
+#job-info .container {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  column-gap: 20px;
+}
+
+/* Sắp xếp các mục thông tin nghề nghiệp theo đúng vị trí */
+.kinh-nghiem {
+  grid-area: 1 / 1;
+  border: 1px solid #e9ecef;
+  padding: 30px 20px 30px 20px;
+}
+.hoc-van {
+  grid-area: 2 /2;
+  border: 1px solid #e9ecef;
+  padding: 30px 20px 30px 20px;
+}
+.hoat-dong {
+  grid-area: 2 / 1;
+  border: 1px solid #e9ecef;
+  padding: 30px 20px 30px 20px;
+}
+.so-thich {
+  grid-area: 2 / 3;
+  border: 1px solid #e9ecef;
+  padding: 30px 20px 30px 20px;
+}
+.ngon-ngu {
+  grid-area: 1 / 3;
+  border: 1px solid #e9ecef;
+  padding: 30px 20px 30px 20px;
+}
+.ky-nang {
+  grid-area: 1 / 2;
+  border: 1px solid #e9ecef;
+  padding: 30px 20px 30px 20px;
+}
+
+.job-info-header {
+  display: grid;
+  grid-template-columns: 75% 25%;
+  align-items: center;
+  justify-content: center;
+}
+
+#job-info .icon {
+  font-size: 36px;
+}
+
+#job-info ul {
+  padding-left: 12px;
+  padding-right: 20px;
+  list-style: none;
+}
+
+#job-info ul li {
+  margin-top: 40px;
+  margin-left: 10px;
+  line-height: 1.7;
+  position: relative;
+}
+
+#job-info ul li::before {
+  content: "\2022";
+  color: #0079bc;
+  font-size: 24px;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  position: absolute;
+  left: -22px;
+  top: -7px;
+}
+
+#job-info ul li p:first-child {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.job-info-year span {
+  background-color: #0079bc;
+  padding: 2px 15px;
+  color: #fff;
+  border-radius: 10px;
+}
+
+/* Tạo thang điểm 3 cấp */
+.grade-blue {
+  width: 45px;
+  height: 2px;
+  background: #199cdb;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.grade-grey {
+  width: 45px;
+  height: 2px;
+  background: #ced4da;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.skill-type,
+.language-type {
+  margin-bottom: 15px;
+}
+
+.skill-all,
+.language-all {
+  margin-top: 30px;
+}
+
+/* Chia nội dung phần sở thích làm các cột bằng nhau */
+.hobby-all {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+.hobby-type {
+  text-align: center;
+}
+
+/* Vẽ hình tròn bao quanh icon */
+.hobby-type i {
+  font-size: 20px;
+  border: 1px solid #0079bc;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: #0079bc;
+  margin-bottom: 10px;
+}
+
+/* --------------------------------Phần Chứng chỉ - Giải thưởng---------------------------- */
+.certificate-all {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 40px;
+  row-gap: 60px;
+  position: relative;
+}
+
+.certificate-item {
+  display: grid;
+  grid-template-columns: 200px 310px;
+  justify-content: start;
+  align-items: start;
+  column-gap: 20px;
+}
+
+.certificate-item img {
+  width: 200px;
+  height: auto;
+}
+
+.certificate-title h2 {
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.certificate-title ul {
+  list-style-type: none;
+  line-height: 1.7;
+  margin-top: 10px;
+}
+
+/* Tạo border-right cho item cột bên trái */
+.certificate-item:nth-child(even) {
+  border-right: 1px solid #d6c08d;
+}
+
+/* Phần tử item cuối cùng sẽ không có border-right và border-bottom */
+.certificate-item:last-child {
+  border-right: none;
+}
+
+/* Cho item cột bên phải padding-left */
+.certificate-item:nth-child(odd) {
+  padding-left: 20px;
+}
+
+/* Tạo đường kẻ ngang ở giữa */
+.certificate-line {
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  top: 50%;
+  left: 0;
+  border: 1px solid #d6c08d;
+}
+
+/* ---------------------------------------Phần Dự Án------------------------------- */
+.project-all {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 30px;
+  margin-top: 40px;
+}
+
+.project-item {
+  border-left: 1px solid #e9ecef;
+  border-right: 1px solid #e9ecef;
+  border-bottom: 1px solid #e9ecef;
+}
+.project-item img {
+  width: 100%;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.project-name {
+  text-transform: uppercase;
+  font-size: 16px;
+  padding: 15px 0 15px 15px;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.project-info {
+  padding: 10px 0 10px 15px;
+}
+
+.project-info .year {
+  background-color: #0079bc;
+  color: #fff;
+  padding: 5px 15px;
+  display: inline-block;
+  border-radius: 15px;
+}
+
+.project-info .place {
+  text-align: center;
+  margin-left: 15px;
+}
+
+.project-info .place::before {
+  content: "\ea20";
+  padding-right: 10px;
+  text-align: center;
+}
+
+.project-info .job {
+  margin-left: 15px;
+}
+
+.project-info .job::before {
+  content: "\ea7a";
+  padding-right: 10px;
+  text-align: center;
+}
+
+td,
+th {
+  border-top: 1px solid #e9ecef;
+  padding: 5px 0 5px 5px;
+}
+
+th {
+  width: 80px;
+  text-align: left;
+  font-weight: normal;
+}
+
+/* --------------------------------Phần Footer-------------------------------- */
+#footer ul {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#footer ul li {
+  display: flex;
+  align-items: center;
+  margin-left: 30px;
+}
+
+/* Chèn các icon vào đằng trước các link */
+.facebook::before {
+  content: "\eb0a";
+  margin-right: 10px;
+  color: #0079bc;
+  font-size: 28px;
+}
+
+.linkedin::before {
+  content: "\eb13";
+  margin-right: 10px;
+  color: #0079bc;
+  font-size: 28px;
+}
+
+.github::before {
+  content: "\e9e2";
+  margin-right: 10px;
+  color: #0079bc;
+  font-size: 28px;
+}
+
+#footer a:link,
+#footer a:visited {
+  text-decoration: none;
+  cursor: pointer;
+  color: #495057;
+}
